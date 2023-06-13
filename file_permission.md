@@ -1,0 +1,3 @@
+## SUID and SGUID
+By using [SUID/SGID](https://linuxhint.com/special-permissions-suid-guid-sticky-bit/), It is possible to execute a file instead of user/group owner. So, and intruders can find an executable file belongs to root user and has the SUID bit to exploit. So to check a system you should check all of the file SUID/SGID are set on:
+``` sudo find / -type f \( -perm -4000 -o -perm -2000 \) > suid_sgid_files.txt ```
